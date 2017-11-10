@@ -23,8 +23,6 @@ class CommentController extends Controller
            'post_id' => $request->get('id')
         ]);
         
-        $post = Post::where('id',$request->get('id'));
-        
-        return redirect('/posts/'.$post);
+        return redirect()->back();
     }
 }
