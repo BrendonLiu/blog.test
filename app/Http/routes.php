@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/',['uses' => 'PostController@index']);
+Route::get('/',['uses' => 'PostController@index'])->name('home');
 Route::get('post/create', ['uses' => 'PostController@create']);
 Route::get('post/{post}',['uses' => 'PostController@show']);
 

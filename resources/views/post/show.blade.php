@@ -4,7 +4,7 @@
 
 <div style="width: 70%">
     <!-- 顯示驗證錯誤 -->
-        @include('common.errors')
+    @include('common.errors')
     <h1>{{$post->title}}</h1>
     <div>{{$post->content}}</div>
     <div align="right">文章建立時間：{{$post->created_at}}</div>

@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
+
 @foreach ($posts as $post)
 <tr>
     <!-- 任務名稱 -->
