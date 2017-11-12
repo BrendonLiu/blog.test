@@ -3,6 +3,8 @@
 @section('content')
 
 <div style="width: 70%">
+    <!-- 顯示驗證錯誤 -->
+        @include('common.errors')
     <h1>{{$post->title}}</h1>
     <div>{{$post->content}}</div>
     <div align="right">文章建立時間：{{$post->created_at}}</div>
@@ -10,9 +12,6 @@
     <h2>我要留言</h2>
     
     <div>
-        <!-- 顯示驗證錯誤 -->
-        @include('common.errors')
-
         <!-- 新任務的表單 -->
         <form action="/comment" method="POST" class="form-horizontal">
             {{ csrf_field() }}
