@@ -9,30 +9,20 @@
 
     <h2>我要留言</h2>
     
-    <div class="panel-body">
+    <div>
         <!-- 顯示驗證錯誤 -->
         @include('common.errors')
 
         <!-- 新任務的表單 -->
         <form action="/comment" method="POST" class="form-horizontal">
             {{ csrf_field() }}
-
-            <!-- 任務名稱 -->
-            <div class="form-group">
-                <div class="col-sm-6">
-                    <input type="hidden" name="id" value="{{$post->id}}">
-                    <input type="text" name="comment" class="form-control">
-                </div>
+            
+            <textarea name="comment" rows="4" cols="50" style="height:200px; width:100% ;resize: none"></textarea>
+            <input type="hidden" name="id" value="{{$post->id}}">
+            <div align="right">
+                <input class="btn btn-default" type="submit" value="送出留言">
             </div>
-
-            <!-- 增加任務按鈕-->
-            <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-6">
-                    <button type="submit" class="btn btn-default">
-                        <i class="fa fa-plus"></i> 送出留言
-                    </button>
-                </div>
-            </div>
+            
         </form>
     </div>
     
