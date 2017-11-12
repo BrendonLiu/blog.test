@@ -11,13 +11,13 @@ class CommentController extends Controller
 {
     public function stroe(Request $request){        
         $this->validate($request, [
-            'comment' => 'required|max:255',
-        ],['comment.required' => '留言不得為空白',
-           'comment.max' => '字元不得超過255']);
+            'content' => 'required|max:255',
+        ],['content.required' => '留言不得為空白',
+           'content.max' => '字元不得超過255']);
           
-        $comment = $request->get('comment');
+        $content = $request->get('content');
         Comment::create([
-           'content' => $comment,
+           'content' => $content,
            'post_id' => $request->get('id')
         ]);
         

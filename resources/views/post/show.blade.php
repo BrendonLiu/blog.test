@@ -17,7 +17,7 @@
         <form action="/comment" method="POST" class="form-horizontal">
             {{ csrf_field() }}
             
-            <textarea name="comment" rows="4" cols="50" style="height:200px; width:100% ;resize: none"></textarea>
+            <textarea name="content" rows="4" cols="50" style="height:200px; width:100% ;resize: none"></textarea>
             <input type="hidden" name="id" value="{{$post->id}}">
             <div align="right">
                 <input class="btn btn-default" type="submit" value="送出留言">
