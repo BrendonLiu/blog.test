@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
+
 <div style="width: 70%">
     <!-- 顯示驗證錯誤 -->
     @include('common.errors')

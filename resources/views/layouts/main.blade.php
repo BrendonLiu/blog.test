@@ -38,7 +38,7 @@
   </head>
 
   <body>
-
+    
     @include('layouts.navbar')
 
     <div class="container theme-showcase" role="main">

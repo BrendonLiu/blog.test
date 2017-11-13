@@ -21,6 +21,6 @@ class CommentController extends Controller
            'post_id' => $request->get('id')
         ]);
         
-        return redirect()->back();
+        return redirect()->back()->with('status', '留言新增完成');
     }
 }
