@@ -21,7 +21,7 @@
         <div align="right">文章建立時間：{{$post->created_at}}</div>
     </td>
     <td>
-        <div align="right"><a href="http://dev.blog.test/post/{{$post->id}}">more</a></div>
+        <div align="right"><a href="{{route('post.show',[$post->id])}}">more</a></div>
     </td>
     <br>
 </tr>

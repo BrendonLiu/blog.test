@@ -14,20 +14,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="http://dev.blog.test">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="{{route('home')}}">Home<span class="sr-only">(current)</span></a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
           @if (Auth::guest())
           <li>
-              <a href="http://dev.blog.test/login" role="button">登入</a>
+              <a href="{{route('showLoginForm')}}" role="button">登入</a>
           </li>
           @else
-          <li><a href="http://dev.blog.test/post/create">新增文章</a></li>
+          <li><a href="{{route('post.create')}}">新增文章</a></li>
           <li class="dropdown">
-              <a href="http://dev.blog.test/logout" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{ Auth::user()->name }}<span class="caret"></span></a>
+              <a href="{{route('logout')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{ Auth::user()->name }}<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                  <li><a href="http://dev.blog.test/logout"><span class="glyphicon glyphicon-log-out"></span>  登出</a></li>
+                  <li><a href="{{route('logout')}}"><span class="glyphicon glyphicon-log-out"></span>  登出</a></li>
               </ul>
           </li>
           @endif       
