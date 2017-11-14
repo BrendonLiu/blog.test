@@ -30,9 +30,9 @@ class PostController extends Controller
             'title' => 'required|max:255',
             'content' => 'required'
         ],[
-            'title.required' => '標題不得為空白',
+            'title.required' => '文章標題必填',
             'title.max' => '標題不得超過255個字元',
-            'content.required' => '內文不得為空白']
+            'content.required' => '文章內文必填']
                 );
          
         $title = $request->get('title');
