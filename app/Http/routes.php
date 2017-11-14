@@ -11,15 +11,18 @@
 |
 */
 
-Route::get('/',['uses' => 'PostController@index'])->name('home');
-Route::get('post/create', 
-        ['middleware' => 'auth',
-         'uses' => 'PostController@create'
-            ]);
-Route::get('post/{post}',['uses' => 'PostController@show']);
+//Route::group(['middleware' => ['web']], function () {
+    
+    Route::get('/', ['uses' => 'PostController@index'])->name('home');
+    Route::get('post/create', ['middleware' => 'auth',
+        'uses' => 'PostController@create'
+    ]);
+    Route::get('post/{post}', ['uses' => 'PostController@show']);
 
-Route::post('post',['uses' => 'PostController@store']);
-Route::post('comment',['uses' => 'CommentController@stroe']);
-
-Route::auth();
-//Route::get('/home', 'HomeController@index');
+    Route::post('post', ['uses' => 'PostController@store']);
+    Route::post('comment', ['uses' => 'CommentController@stroe']);
+    
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
+    
+//});
