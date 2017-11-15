@@ -11,7 +11,7 @@
 |
 */
 
-//Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web']], function () {
     
     Route::get('/', ['uses' => 'PostController@index'])->name('home');
     Route::get('post/create', ['middleware' => 'auth',
@@ -31,4 +31,4 @@
     //Route::get('register', ['uses' => 'Auth\AuthController@showRegistrationForm'])->name('showRegistrationForm');
     //Route::post('register', ['uses' => 'Auth\AuthController@register'])->name('register');
       
-//});
+});
