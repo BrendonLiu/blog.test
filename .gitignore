@@ -4,3 +4,27 @@
 Homestead.yaml
 Homestead.json
 .env
+.env.testing
+_ide_helper*.php
+.tags
+
+
+#project
+nbproject/private
+/.idea
+
+#osx
+.DS_Store
+
+#windows
+Thumbs.db
+
+#vagrant files
+.vagrant
+Vagrantfile
+
+storage/*.sqlite
+storage/*.sqlite-journal
+storage/debugbar/
+public/cdn
+/resources/assets/bower/
