@@ -19,7 +19,7 @@
     
     <div>
         <!-- 新任務的表單 -->
-        <form action="/comment" method="POST" class="form-horizontal">
+        <form action="{{route('comment.store')}}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
             
             <textarea name="content" rows="4" cols="50" style="height:200px; width:100% ;resize: none"></textarea>

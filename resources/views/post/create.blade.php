@@ -7,7 +7,7 @@
     <h2>新增文章</h2> 
     <div>
         <!-- 新任務的表單 -->
-        <form action="/post" method="POST" class="form-horizontal">
+        <form action="{{route('post.store')}}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
             
             <h3>文章標題</h3>
