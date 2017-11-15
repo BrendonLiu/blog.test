@@ -18,7 +18,7 @@
         <div>{{ $post->content }}</div>
     </td>
     <td>
-        <div align="right">文章建立時間：{{$post->created_at}}</div>
+        <div align="right">文章建立時間：{{$post->created_at->toFormattedDateString()}}</div>
     </td>
     <td>
         <div align="right"><a href="{{route('post.show',[$post->id])}}">more</a></div>

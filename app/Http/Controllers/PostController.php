@@ -19,7 +19,11 @@ class PostController extends Controller
     }
     
     public function show(Post $post){
-        $comments = Comment::where('post_id',$post->id)->get();
+        //$comments = Comment::where('post_id',$post->id)->get();
+        
+        //using relationship to get all comments
+        $comments = $post->comment;
+        
         return view('post.show',
                 ['post' => $post,'comments' => $comments]);
     }
