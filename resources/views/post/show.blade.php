@@ -35,8 +35,8 @@
     @foreach($comments as $comment)
     <tr>
         <!-- 任務名稱 -->
-        <td class="table-text"> 
-            {{ $comment->content }}
+        <td class="table-text">
+            {!! nl2br($comment->content) !!}
         </td>
         
         <td>

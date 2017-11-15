@@ -14,7 +14,7 @@ class CommentController extends Controller
         ],['content.required' => '留言不得為空白',
            'content.max' => '留言不得超過255個字元'
             ]);
-          
+        
         $content = $request->get('content');
         Comment::create([
            'content' => $content,
