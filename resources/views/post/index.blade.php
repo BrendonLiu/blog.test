@@ -13,9 +13,9 @@
     <!-- 任務名稱 -->
     <td class="table-text"> 
         <div>
-            <font size="5">{{ $post->title }}</font>
+            <font size="5">{{$post->title}}</font>
         </div>
-        <div>{{ $post->content }}</div>
+        <div>{!! nl2br($post->content) !!}</div>
     </td>
     <td>
         <div align="right">文章建立時間：{{$post->created_at->toFormattedDateString()}}</div>
