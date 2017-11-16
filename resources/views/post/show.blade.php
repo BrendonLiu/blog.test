@@ -12,7 +12,7 @@
     <!-- 顯示驗證錯誤 -->
     @include('common.errors')
     <h1>{{$post->title}}</h1>
-    <div>{{$post->content}}</div>
+    <div>{!! nl2br($post->content) !!}</div>
     <div align="right">文章建立時間：{{$post->created_at}}</div>
 
     <h2>我要留言</h2>
